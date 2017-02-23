@@ -41,47 +41,47 @@ public class Person {
 	
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 	
 	public int getAge()
 	{
-		return age;
+		return this.age;
 	}
 	
 	public String getGender()
 	{
-		return gender;
+		return this.gender;
 	}
 	
 	public String getFatherName()
 	{
-		return father.getName();
+		return this.father.getName();
 	}
 	
 	public String getGrandFatherName()
 	{
-		return grandFather.getName();
+		return this.grandFather.getName();
 	}
 	
 	public String getSonName()
 	{
-		return son.getName();
+		return this.son.getName();
 	}	
 	
 	public Person getSon()
 	{
-		return son;
+		return this.son;
 	}
 	
 	public Person getDaughter()
 	{
-		return daughter;
+		return this.daughter;
 	}
 	
 	public Person getFather()
 	{
-		return father;
+		return this.father;
 	}
 	
 	public void setName(String name)
@@ -98,20 +98,20 @@ public class Person {
 	{
 		String genderParent = parent.getGender();
 		String genderChild = this.getGender();
-		if (genderParent.toUpperCase() == "MALE")
+		if (genderParent.toUpperCase().equals("MALE"))
 		{
 			this.father = parent;
-			if ((genderChild.toUpperCase() == "MALE") && (parent.getSon() == null))
+			if ((genderChild.toUpperCase().equals("MALE")) && (parent.getSon() == null))
 			{
 				parent.setChild(this);
 			}
-			else if ((genderChild.toUpperCase() == "FEMALE") && (parent.getDaughter() == null))
+			else if ((genderChild.toUpperCase().equals("FEMALE")) && (parent.getDaughter() == null))
 			{
 				parent.setChild(this);
 			}
 			
 		}
-		else if (genderParent.toUpperCase() == "FEMALE")
+		else if (genderParent.toUpperCase().equals("FEMALE"))
 		{
 			this.mother = parent;
 			parent.setChild(this);

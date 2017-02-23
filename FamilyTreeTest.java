@@ -3,7 +3,7 @@ public class FamilyTreeTest {
 
 	public static void main(String[] args) {
 		Person me = new Person("Rick Scott", 35, "Male");
-		Person dad = new Person("Scott Rick", 45, "Male");		
+		Person dad = new Person("Scott Rick", 45, "Female");		
 		me.setParent(dad);	
 		String name = me.getFatherName();
 		System.out.print(name);
