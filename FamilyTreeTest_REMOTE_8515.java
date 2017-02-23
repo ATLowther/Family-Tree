@@ -5,7 +5,7 @@ public class FamilyTreeTest {
 		Person me = new Person("Rick Scott", 35, "Male");
 		Person dad = new Person("Scott Rick", 45, "Female");		
 		me.setParent(dad);	
-		String name = me.getMotherName();
+		String name = me.getFatherName();
 		System.out.print(name);
 		//System.out.println("My dad's name is: " + me.getFatherName() + 
 		//		"My son's name is: " + dad.getSonName());
