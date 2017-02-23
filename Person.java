@@ -23,6 +23,16 @@ public class Person {
 		son = null;
 	}
 	
+	public Person(String name, int age, String gender, Person father)
+	{
+		this.name = name;
+		this.age = age;	
+		this.gender = gender;
+		this.father = father;
+		grandFather = null;
+		son = null;
+	}
+	
 	public Person(String name, int age, Person father)
 	{
 		this.name = name;
@@ -41,47 +51,47 @@ public class Person {
 	
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 	
 	public int getAge()
 	{
-		return age;
+		return this.age;
 	}
 	
 	public String getGender()
 	{
-		return gender;
+		return this.gender;
 	}
 	
 	public String getFatherName()
 	{
-		return father.getName();
+		return this.father.getName();		 
 	}
 	
 	public String getGrandFatherName()
 	{
-		return grandFather.getName();
+		return this.grandFather.getName();
 	}
 	
 	public String getSonName()
 	{
-		return son.getName();
+		return this.son.getName();
 	}	
 	
 	public Person getSon()
 	{
-		return son;
+		return this.son;
 	}
 	
 	public Person getDaughter()
 	{
-		return daughter;
+		return this.daughter;
 	}
 	
 	public Person getFather()
 	{
-		return father;
+		return this.father;
 	}
 	
 	public void setName(String name)
