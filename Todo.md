@@ -1,0 +1,3 @@
+- [] Persist tree between runs
+- [] Load tree at each run
+- [] make something pretty to look at (pdf?)
