@@ -23,6 +23,16 @@ public class Person {
 		son = null;
 	}
 	
+	public Person(String name, int age, String gender, Person father)
+	{
+		this.name = name;
+		this.age = age;	
+		this.gender = gender;
+		this.father = father;
+		grandFather = null;
+		son = null;
+	}
+	
 	public Person(String name, int age, Person father)
 	{
 		this.name = name;
