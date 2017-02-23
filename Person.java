@@ -69,6 +69,11 @@ public class Person {
 		return this.father.getName();
 	}
 	
+	public String getMotherName()
+	{
+		return this.mother.getName();
+	}
+	
 	public String getGrandFatherName()
 	{
 		return this.grandFather.getName();
@@ -92,6 +97,11 @@ public class Person {
 	public Person getFather()
 	{
 		return this.father;
+	}
+	
+	public Person getMother()
+	{
+		return this.mother;
 	}
 	
 	public void setName(String name)
@@ -124,7 +134,15 @@ public class Person {
 		else if (genderParent.toUpperCase().equals("FEMALE"))
 		{
 			this.mother = parent;
-			parent.setChild(this);
+			if ((genderChild.toUpperCase().equals("FEMALE")) && (parent.getDaughter() == null))
+			{
+				parent.setChild(this);
+			}
+			else if ((genderChild.toUpperCase().equals("MALE")) && (parent.getSon() == null))
+			{
+				parent.setChild(this);
+			}
+			
 		}
 	}
 	
