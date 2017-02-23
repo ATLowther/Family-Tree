@@ -126,7 +126,7 @@ public class Person {
 	public void setChild(Person child)
 	{
 		String genderChild = child.getGender();		
-		if (genderChild.toUpperCase() == "MALE")
+		if (genderChild.toUpperCase().equals("MALE"))
 		{
 			this.son = child;
 			if (child.getFather() == null)
@@ -134,7 +134,7 @@ public class Person {
 				child.setParent(this);
 			}			
 		}
-		else if (genderChild.toUpperCase() == "FEMALE")
+		else if (genderChild.toUpperCase().equals("FEMALE"))
 		{
 			this.daughter = child;
 			if (child.getFather() == null)
